@@ -138,7 +138,7 @@ export function Personnel() {
               exit={{ y: '100%' }}
               transition={{ type: 'spring', damping: 25, stiffness: 200 }}
               onClick={(e) => e.stopPropagation()}
-              className="relative w-full max-w-4xl bg-white rounded-t-3xl md:rounded-2xl overflow-hidden flex flex-col md:flex-row shadow-2xl h-[90dvh] md:h-auto md:max-h-[90vh]"
+              className="relative w-full max-w-4xl bg-white rounded-t-3xl md:rounded-2xl overflow-hidden flex flex-col md:flex-row shadow-2xl h-[95dvh] md:h-auto md:max-h-[90vh]"
             >
               <button 
                 onClick={closeModal}
@@ -148,7 +148,7 @@ export function Personnel() {
               </button>
 
               {/* Image Section */}
-              <div className="relative w-full md:w-1/2 bg-gray-100 flex items-center justify-center p-4 h-[45dvh] md:h-auto md:min-h-[600px] flex-shrink-0">
+              <div className="relative w-full md:w-1/2 bg-gray-100 flex items-center justify-center p-4 h-[65dvh] md:h-auto md:min-h-[600px] flex-shrink-0">
                 <img
                   key={costumeIndex}
                   src={`https://pub-97f15096d8b349a1b14a6e519fbe1068.r2.dev/${selectedCharacter.code}${costumeIndex}.jpg`}
@@ -162,25 +162,25 @@ export function Personnel() {
                 {/* Navigation Controls */}
                 <button 
                   onClick={prevCostume}
-                  className="absolute left-4 top-1/2 -translate-y-1/2 p-2 bg-white/50 hover:bg-white/80 rounded-full shadow-sm text-gray-900 transition-colors"
+                  className="absolute left-4 top-1/2 -translate-y-1/2 p-2 md:p-3 bg-white/80 hover:bg-white rounded-full shadow-md text-gray-900 hover:text-blue-700 transition-all border border-gray-200 hover:scale-110 z-20"
                 >
-                  <ChevronLeft className="h-6 w-6" />
+                  <ChevronLeft className="h-6 w-6 md:h-8 md:w-8" />
                 </button>
                 <button 
                   onClick={nextCostume}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 p-2 bg-white/50 hover:bg-white/80 rounded-full shadow-sm text-gray-900 transition-colors"
+                  className="absolute right-4 top-1/2 -translate-y-1/2 p-2 md:p-3 bg-white/80 hover:bg-white rounded-full shadow-md text-gray-900 hover:text-blue-700 transition-all border border-gray-200 hover:scale-110 z-20"
                 >
-                  <ChevronRight className="h-6 w-6" />
+                  <ChevronRight className="h-6 w-6 md:h-8 md:w-8" />
                 </button>
 
                 {/* Indicators */}
-                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 md:gap-3 z-20 bg-white/50 backdrop-blur-sm px-3 py-2 rounded-full">
                   {[0, 1, 2, 3, 4].map((idx) => (
                     <button
                       key={idx}
                       onClick={() => setCostumeIndex(idx)}
-                      className={`w-2 h-2 rounded-full transition-colors ${
-                        idx === costumeIndex ? 'bg-blue-600' : 'bg-gray-300'
+                      className={`w-2 h-2 md:w-3 md:h-3 rounded-full transition-all shadow-sm ${
+                        idx === costumeIndex ? 'bg-blue-600 scale-125' : 'bg-white hover:bg-gray-200'
                       }`}
                     />
                   ))}
