@@ -92,15 +92,19 @@ export function Evaluation() {
               <ul className="space-y-3 text-sm text-red-700">
                 <li className="flex items-start gap-2">
                   <span className="mt-1 font-bold">•</span>
-                  <span>미성년자 등장 금지. 모든 인물은 성인입니다.</span>
+                  <span>미성년자 등장 금지. 모든 주요 인물은 성인입니다.</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-1 font-bold">•</span>
-                  <span>강압적 실습 금지. 동의 없는 실습은 불가합니다.</span>
+                  <span>강압적 실습 금지. 동의 없는 신체 접촉, 강요, 협박은 불가합니다.</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-1 font-bold">•</span>
-                  <span>후보생의 불편 신호 및 중단 요청 무시 금지.</span>
+                  <span>후보생을 물건처럼 취급하거나 비인격적인 속칭 사용 금지.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1 font-bold">•</span>
+                  <span>후보생의 불편 신호, 중단 요청, 건강 이상 무시 금지.</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-1 font-bold">•</span>
